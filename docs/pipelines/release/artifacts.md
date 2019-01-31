@@ -151,8 +151,10 @@ You can link a release pipeline to any of
 the build pipelines in Azure Pipelines or TFS project collection.
 
 > [!NOTE]
-> You must include a **Publish Artifacts** task in your build
-pipeline. For XAML build pipelines, an artifact with the name **drop**
+> For artifacts to work in release, you must use the **Publish Build Artifacts** task in your build
+pipeline, not the **Publish Pipeline Artifacts** task. The latter does not work with relase pipelines yet.
+>
+> For XAML build pipelines, an artifact with the name **drop**
 is published implicitly.
 
 Some of the differences in capabilities between different versions of TFS and Azure Pipelines are:
